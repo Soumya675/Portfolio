@@ -98,6 +98,12 @@ export default function About() {
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
+                <CheckCircle className="w-4 h-4 text-amber-500 mt-1 shrink-0" />
+                <span className="text-slate-700 dark:text-slate-300">
+                  <strong>Key Honors:</strong> NASSCOM Gold Medal & IIT Finalist
+                </span>
+              </div>
+              <div className="flex items-start gap-2.5">
                 <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-1 shrink-0" />
                 <span className="text-slate-700 dark:text-slate-300">
                   <strong>Orientation:</strong> Tech & Business Solutions

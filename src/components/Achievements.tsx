@@ -49,7 +49,15 @@ export default function Achievements() {
                   </div>
                   <div>
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400">
+                      <span
+                        className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
+                          item.badge.includes('Gold')
+                            ? 'bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 border border-amber-300/80 dark:border-amber-700/80'
+                            : item.badge.includes('IIT') || item.badge.includes('Finalist')
+                            ? 'bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-200 dark:border-purple-800'
+                            : 'bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400'
+                        }`}
+                      >
                         {item.badge}
                       </span>
                       <span className="text-xs text-slate-400 font-medium">

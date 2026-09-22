@@ -78,8 +78,8 @@ export const keyStats: StatItem[] = [
   },
   {
     label: 'National Honors',
-    value: '2x',
-    sublabel: 'SIH 2025 & BRICS Finalist',
+    value: '3x',
+    sublabel: 'SIH, BRICS & IIT Finalist',
     iconName: 'Award',
   },
   {
@@ -227,12 +227,13 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: 'database',
-    title: 'Database & Data Storage',
-    description: 'Relational data modeling, schema definition, and query optimization.',
+    title: 'Database & Big Data',
+    description: 'Relational schema modeling, query optimization, and distributed Big Data principles.',
     iconName: 'Database',
     skills: [
       { name: 'MySQL', level: 84, proficiency: 'Proficient' },
       { name: 'SQL Querying & Joins', level: 85, proficiency: 'Proficient' },
+      { name: 'Big Data Analytics (NASSCOM Gold)', level: 88, proficiency: 'Proficient' },
       { name: 'Database Normalization', level: 82, proficiency: 'Proficient' },
     ],
   },
@@ -342,6 +343,16 @@ export const achievementsData: AchievementItem[] = [
     badge: '3-Semester Gold Medalist',
   },
   {
+    id: 'ach-nasscom-gold',
+    title: 'NASSCOM Big Data Certification – Gold Medalist',
+    organization: 'NASSCOM FutureSkills Prime',
+    category: 'Certification',
+    year: '2024',
+    description:
+      'Conferred Gold Medal distinction in the national NASSCOM Big Data certification, validating expertise in big data architecture, distributed data processing, and large-scale analytics.',
+    badge: 'NASSCOM Gold Medalist',
+  },
+  {
     id: 'ach-1',
     title: 'Smart India Hackathon (SIH) 2025 – Finalist',
     organization: 'Ministry of Education & AICTE, Government of India',
@@ -350,6 +361,16 @@ export const achievementsData: AchievementItem[] = [
     description:
       'Selected as a national finalist in India’s premier innovation hackathon, collaborating on technology-driven software solutions addressing real-world problem statements.',
     badge: 'National Finalist',
+  },
+  {
+    id: 'ach-iit-bbs',
+    title: 'IIT Bhubaneswar Pitch Deck Competition – Finalist',
+    organization: 'Indian Institute of Technology (IIT) Bhubaneswar',
+    category: 'Hackathon',
+    year: '2024',
+    description:
+      'Recognized as a finalist at IIT Bhubaneswar for presenting an innovative technology-driven business model and startup pitch deck to industry experts, incubators, and investors.',
+    badge: 'IIT Finalist',
   },
   {
     id: 'ach-2',

@@ -171,8 +171,8 @@ export default function Hero({ onOpenResume }: HeroProps) {
                   <Award className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">National Honor</div>
-                  <div className="text-sm font-bold text-slate-900 dark:text-white">SIH 2025 Finalist</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">National Honors</div>
+                  <div className="text-sm font-bold text-slate-900 dark:text-white">SIH & IIT Finalist</div>
                 </div>
               </div>
             </div>

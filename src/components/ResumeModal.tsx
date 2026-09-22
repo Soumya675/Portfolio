@@ -154,7 +154,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <strong className="text-slate-900">AI / ML:</strong> Machine Learning, TensorFlow, Keras, CNN, OpenCV, NumPy
               </div>
               <div>
-                <strong className="text-slate-900">Database:</strong> MySQL, Relational Schema Normalization
+                <strong className="text-slate-900">Database & Big Data:</strong> MySQL, Big Data (NASSCOM Gold Medal), SQL, Relational Modeling
               </div>
               <div>
                 <strong className="text-slate-900">Tools & Platforms:</strong> Eclipse, Git, GitHub, VS Code, Postman
@@ -214,7 +214,13 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <strong>3-Semester Gold Medalist:</strong> Conferred for highest scholastic merit and academic excellence across 3 consecutive semesters in B.Tech CSE (8.76 CGPA).
               </li>
               <li>
+                <strong>NASSCOM Big Data Certification (Gold Medalist):</strong> Awarded prestigious national Gold Medal distinction in Big Data architecture & analytics.
+              </li>
+              <li>
                 <strong>Smart India Hackathon (SIH) 2025:</strong> National Finalist
+              </li>
+              <li>
+                <strong>IIT Bhubaneswar Pitch Deck Competition:</strong> Finalist for innovative tech-startup business model & pitch presentation.
               </li>
               <li>
                 <strong>KIIT University BRICS Summit:</strong> Finalist delegate representing collegiate innovation

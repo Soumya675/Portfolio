@@ -8,6 +8,7 @@ import {
   Linkedin,
   MapPin,
   ExternalLink,
+  Globe,
   Award,
   GraduationCap,
   Briefcase,
@@ -96,6 +97,16 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <MapPin className="w-3 h-3 text-slate-500" />
                 Bhubaneswar, Odisha, India
               </span>
+              <span>•</span>
+              <a
+                href={personalInfo.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-blue-700 hover:underline"
+              >
+                <Globe className="w-3 h-3 text-slate-500" />
+                {personalInfo.portfolioDisplay}
+              </a>
             </div>
           </div>
 
@@ -195,8 +206,18 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     <span className="font-bold text-slate-900">{proj.title}</span>
                     <span className="text-slate-500 text-[11px]">{proj.category}</span>
                   </div>
-                  <div className="text-[11px] text-blue-800 font-semibold mb-1">
-                    Tech Stack: {proj.technologies.join(', ')}
+                  <div className="flex flex-wrap items-center justify-between text-[11px] text-blue-800 font-semibold mb-1 gap-x-3 gap-y-0.5">
+                    <span>Tech Stack: {proj.technologies.join(', ')}</span>
+                    {proj.demoUrl && (
+                      <a
+                        href={proj.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline font-medium hover:text-blue-800 shrink-0"
+                      >
+                        Live: {proj.demoUrl.replace('https://', '').replace(/\/$/, '')}
+                      </a>
+                    )}
                   </div>
                   <p className="text-slate-700 leading-snug">{proj.description}</p>
                 </div>

@@ -41,7 +41,7 @@ export interface ProjectItem {
   id: string;
   title: string;
   subtitle: string;
-  category: 'Full Stack' | 'AI/ML' | 'Frontend';
+  category: 'Full Stack' | 'AI/ML' | 'Frontend' | 'Mobile & Android';
   technologies: string[];
   description: string;
   longDescription: string;

@@ -3,6 +3,7 @@ import {
   ArrowUp,
   Linkedin,
   Github,
+  Globe,
   Mail,
   Phone,
   GraduationCap,
@@ -79,6 +80,17 @@ export default function Footer() {
               title="GitHub Profile"
             >
               <Github className="w-4 h-4" />
+            </a>
+
+            <a
+              href={personalInfo.portfolioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors"
+              aria-label="Live Portfolio Website"
+              title="Live Portfolio Website"
+            >
+              <Globe className="w-4 h-4" />
             </a>
 
             <a

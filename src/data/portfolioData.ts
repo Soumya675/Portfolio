@@ -12,6 +12,12 @@ import soumyaPortrait from '../assets/images/soumya_real_portrait_1790061774619.
 import ecommerceImg from '../assets/images/ecommerce_project_1790061186990.jpg';
 import animalImg from '../assets/images/animal_prediction_1790061202976.jpg';
 import portfolioImg from '../assets/images/portfolio_preview_1790061224303.jpg';
+import kathaAiImg from '../assets/images/katha_ai_preview_1791008080563.jpg';
+import talentMatchImg from '../assets/images/talentmatch_preview_1791008093834.jpg';
+import jobskulImg from '../assets/images/jobskul_preview_1791008105846.jpg';
+import smartShopImg from '../assets/images/smart_shop_preview_1791008121192.jpg';
+import spVehicleImg from '../assets/images/sp_vehicle_preview_1791008137531.jpg';
+import youthClubImg from '../assets/images/youth_club_preview_1791008151280.jpg';
 
 export const personalInfo = {
   name: 'Soumya Ranjan Parida',
@@ -24,6 +30,8 @@ export const personalInfo = {
   linkedinDisplay: 'linkedin.com/in/Soumya',
   github: 'https://github.com/soumyaranjan-parida',
   githubDisplay: 'github.com/soumya',
+  portfolioUrl: 'https://srpportfolio.netlify.app/',
+  portfolioDisplay: 'srpportfolio.netlify.app',
   location: 'Khordha / Bhubaneswar, Odisha, India',
   college: 'GIFT Autonomous College, Khordha, Odisha',
   degree: "Bachelor of Technology, Computer Science Engineering",
@@ -84,8 +92,8 @@ export const keyStats: StatItem[] = [
   },
   {
     label: 'Core Projects',
-    value: '3+',
-    sublabel: 'Full Stack & AI Systems',
+    value: '8+',
+    sublabel: 'AI, Full Stack & Mobile Systems',
     iconName: 'FolderGit2',
   },
 ];
@@ -253,9 +261,168 @@ export const skillCategories: SkillCategory[] = [
 
 export const projectsData: ProjectItem[] = [
   {
+    id: 'katha-ai',
+    title: 'Katha AI – India’s Multilingual Voice-to-Action Assistant',
+    subtitle: 'Multilingual Voice AI in English, Hindi, Odia & Hinglish with Action Execution',
+    category: 'AI/ML',
+    technologies: ['Voice AI', 'Multilingual NLP', 'Speech-to-Text', 'RAG Retrieval', 'React.js', 'TypeScript', 'Tailwind CSS'],
+    description:
+      'Speak naturally in English, Hindi, Odia, and Hinglish. Katha AI understands intent, maintains context, retrieves documents, and executes real actions with user permission.',
+    longDescription:
+      'Katha AI is a state-of-the-art multilingual voice-to-action AI assistant engineered for India’s rich linguistic diversity. It enables users to communicate effortlessly across English, Hindi, Odia, and colloquial Hinglish. Katha AI comprehends complex conversational intents, maintains multi-turn context, dynamically retrieves domain documents via RAG, and safely executes verified programmatic actions with explicit user permission.',
+    features: [
+      'Fluent speech recognition & synthesis across English, Hindi, Odia, and Hinglish',
+      'Context-aware intent classification and multi-turn conversational memory',
+      'Retrieval-Augmented Generation (RAG) querying localized documentation and verified sources',
+      'Voice-to-action automation engine dispatching workflows with explicit user confirmation',
+      'Interactive voice waveform visualizer with real-time phoneme and transcription sync',
+      'Offline-resilient fallback caching for essential local commands and repeated queries',
+    ],
+    image: kathaAiImg,
+    architectureHighlights: [
+      'Acoustic and semantic NLP pipeline tuned for Indian regional phonetic nuances and code-switching',
+      'Permission-gated action orchestration layer preventing unconfirmed external API calls',
+      'Low-latency semantic document retrieval delivering rapid factual grounding',
+    ],
+    githubUrl: 'https://github.com/soumyaranjan-parida',
+  },
+  {
+    id: 'talentmatch-ai',
+    title: 'TalentMatch AI – Career Matching & Skill Gap Engine',
+    subtitle: 'Intelligent ATS Resume Parsing & Job Description Compatibility Analytics',
+    category: 'AI/ML',
+    technologies: ['AI / NLP', 'Resume Parsing', 'Semantic Matching', 'React.js', 'TypeScript', 'Tailwind CSS'],
+    description:
+      'An intelligent platform using AI to match resumes with job descriptions, bridge skill gaps, and accelerate career growth with personalized recommendations.',
+    longDescription:
+      'TalentMatch AI accelerates the career journey by bridging the disconnect between candidate resumes and modern job requirements. Powered by natural language processing and semantic embeddings, the platform evaluates candidate resumes against real-time job descriptions, computes an ATS compatibility score, pinpoints exact missing competencies, and builds a customized upskilling roadmap.',
+    features: [
+      'Multi-document ATS resume parsing comparing profiles against targeted job roles',
+      'Semantic skill gap analysis identifying missing frameworks, libraries, and core proficiencies',
+      'Interactive skill compatibility radar chart and match confidence percentage',
+      'Automated bullet-point optimization recommendations tailored for ATS screening algorithms',
+      'Personalized upskilling roadmap linking skill gaps to curated learning projects',
+      'Recruiter-ready report generator providing candidate readiness audits',
+    ],
+    image: talentMatchImg,
+    architectureHighlights: [
+      'Vector cosine similarity engine evaluating semantic relevance beyond simple keyword search',
+      'Heuristic parser isolating candidate experience, technical credentials, and achievements',
+      'Lightweight client-side processing ensuring privacy of uploaded candidate documents',
+    ],
+    githubUrl: 'https://github.com/soumyaranjan-parida',
+  },
+  {
+    id: 'jobskul',
+    title: 'Jobskül – Hire • Train • Deploy',
+    subtitle: 'Career & Talent Ecosystem with AI Job Matching & ATS Resume Builder',
+    category: 'Full Stack',
+    technologies: ['React.js', 'TypeScript', 'Node.js', 'REST APIs', 'ATS Engine', 'Tailwind CSS'],
+    description:
+      'Comprehensive career and talent ecosystem featuring advanced job search, AI job matching, ATS resume builder, project-based learning, recruitment tracking, and recruiter dashboards.',
+    longDescription:
+      'Jobskül is an end-to-end recruitment and workforce development ecosystem operating on the "Hire • Train • Deploy" methodology. It equips aspiring engineers with an intelligent job search board, automated ATS resume builder, and practical project-based training modules. On the corporate side, hiring managers access candidate pipeline Kanban boards, skill verification trackers, and analytics dashboards.',
+    features: [
+      'Advanced multi-parameter job search engine with tech-stack, stipend, and location filters',
+      'Intelligent ATS resume builder producing industry-standard recruiter-compliant CVs',
+      'Project-based learning curricula providing hands-on coding scenarios for real-world prep',
+      'Recruiter applicant management dashboard with interactive pipeline stage tracking',
+      'AI candidate ranking scoring applicant match quality across posted prerequisites',
+      'Interview coordination system managing assessment schedules and status updates',
+    ],
+    image: jobskulImg,
+    architectureHighlights: [
+      'Role-based interface separation tailored for candidates, mentors, and corporate recruiters',
+      'RESTful backend architecture providing sub-second candidate search and job indexing',
+      'Modular state management managing complex resume drafting and application tracking',
+    ],
+    githubUrl: 'https://github.com/soumyaranjan-parida',
+    demoUrl: 'https://jobskul.netlify.app/',
+  },
+  {
+    id: 'smart-shop',
+    title: 'Smart-Shop – Android Mobile Commerce',
+    subtitle: 'Native Android E-Commerce Application with Offline Caching & Cart Workflow',
+    category: 'Mobile & Android',
+    technologies: ['Android SDK', 'Java', 'XML Layouts', 'REST APIs', 'SQLite', 'Material Design 3'],
+    description:
+      'Native Android mobile commerce application for online shopping, real-time inventory exploration, persistent cart management, and seamless order checkout flow.',
+    longDescription:
+      'Imported from GitHub (Soumya675/Smart-Shop), Smart-Shop is a full-featured native Android e-commerce application. It delivers a fast, responsive mobile shopping experience adhering to Google Material Design 3 guidelines. Users can browse categorized product catalogs, view detailed item specs, manage an interactive shopping cart stored in local SQLite, and complete simulated checkouts with address validation.',
+    features: [
+      'Native Android user interface built with Material Design 3 components and fluid touch animations',
+      'Dynamic product catalog with instant search, category filtering, and price sorting',
+      'Persistent local cart storage powered by SQLite and Android SharedPreferences',
+      'Product detail screen with image pinch-and-zoom, specifications, and live stock indicators',
+      'Streamlined checkout workflow with shipping address form validation',
+      'Asynchronous network handling with graceful offline error states and retry mechanisms',
+    ],
+    image: smartShopImg,
+    architectureHighlights: [
+      'Model-View-Presenter (MVP) architecture ensuring clean decoupling between UI and data logic',
+      'Background threading via Android background workers to keep UI scrolling smooth at 60fps',
+      'Efficient image caching and ViewHolder recycling for memory-safe long list views',
+    ],
+    githubUrl: 'https://github.com/Soumya675/Smart-Shop',
+  },
+  {
+    id: 'sp-vehicle-messaging',
+    title: 'SP Vehicle Messaging – Customer Notification System',
+    subtitle: 'Automated WhatsApp & SMS Reminder Dispatch for Govt. Approved Pollution Testing Centre',
+    category: 'Full Stack',
+    technologies: ['React.js', 'TypeScript', 'Node.js', 'WhatsApp API', 'SMS Gateway', 'Tailwind CSS'],
+    description:
+      'Govt. Approved Pollution Testing Centre customer notification and messaging system. Store contacts and dispatch automated WhatsApp and SMS reminders.',
+    longDescription:
+      'SP Vehicle Messaging is a purpose-built customer communication and compliance management application for a Government-Approved Vehicle Pollution Testing Centre. It digitizes testing records, calculates expiration milestones for commercial and private vehicles, and automatically dispatches personalized renewal notifications via WhatsApp and SMS gateways, reducing expired certificates and increasing return customer rate.',
+    features: [
+      'Customer and vehicle database managing registration numbers, test dates, and expiry deadlines',
+      'Automated expiry scheduling notifying vehicle owners 7 days, 3 days, and 1 day before expiration',
+      'Integrated WhatsApp Business API and SMS gateway for instant one-click or bulk dispatch',
+      'Search and filter by vehicle classification (two-wheeler, four-wheeler, commercial, transport)',
+      'Operational analytics dashboard monitoring daily tests, renewals prompted, and response rates',
+      'Exportable CSV and PDF test reports for regulatory documentation and auditing',
+    ],
+    image: spVehicleImg,
+    architectureHighlights: [
+      'Automated scheduling worker evaluating expiration timestamps and queuing message dispatches',
+      'Multi-lingual message template engine supporting customizable regional alert notifications',
+      'Secure client data store designed for data confidentiality and compliance standards',
+    ],
+    githubUrl: 'https://github.com/soumyaranjan-parida',
+    demoUrl: 'https://sp-pollution.netlify.app/',
+  },
+  {
+    id: 'maa-bhagabati-youth-club',
+    title: 'Maa Bhagabati Youth Club – Official Portal',
+    subtitle: 'Community Management Portal for Member Registrations, Events & Social Activities',
+    category: 'Frontend',
+    technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Responsive UI', 'Form Validation'],
+    description:
+      'Official portal for Maa Bhagabati Youth Club to manage member registrations, community events, announcements, and youth activities.',
+    longDescription:
+      'The official digital portal for Maa Bhagabati Youth Club brings community organization into the modern web. Built to empower local youth development, the portal streamlines new member onboarding, coordinates sports tournaments (cricket, football, athletics), announces public social drives such as blood donation camps, and keeps members informed through an interactive bulletin board.',
+    features: [
+      'Digital youth membership registration form with blood group and interest preferences',
+      'Upcoming community events calendar showcasing sports tournaments and cultural programs',
+      'Public notice bulletin for high-priority local announcements and youth initiatives',
+      'Executive committee and leadership directory with direct contact points',
+      'Photo and media gallery documenting tournament highlights and community service',
+      'Lightweight, responsive mobile layout tailored for quick loading on mobile networks',
+    ],
+    image: youthClubImg,
+    architectureHighlights: [
+      'Component-based React architecture with zero unnecessary external runtime bloat',
+      'Accessible Tailwind styling featuring cultural community color palette and typography',
+      'Client-side form validation ensuring reliable member data acquisition',
+    ],
+    githubUrl: 'https://github.com/soumyaranjan-parida',
+    demoUrl: 'https://mbycc.netlify.app/',
+  },
+  {
     id: 'ecommerce-smartmart',
-    title: 'Smart Mart – E-Commerce Website',
-    subtitle: 'Enterprise Full-Stack Application with Secure Auth & Cart',
+    title: 'Smart Mart – Enterprise E-Commerce Platform',
+    subtitle: 'Enterprise Full-Stack Application with Spring Boot, Security & MySQL',
     category: 'Full Stack',
     technologies: ['Java', 'Spring Boot', 'Spring Security', 'Hibernate/JPA', 'MySQL', 'HTML5', 'CSS3'],
     description:
@@ -281,7 +448,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: 'animal-prediction-model',
     title: 'Animal Prediction Model',
-    subtitle: 'Deep Learning Computer Vision System using CNN',
+    subtitle: 'Deep Learning Computer Vision System using CNN & OpenCV',
     category: 'AI/ML',
     technologies: ['Python', 'TensorFlow', 'Keras', 'CNN', 'OpenCV', 'NumPy', 'Matplotlib'],
     description:
@@ -305,7 +472,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: 'portfolio-website',
-    title: 'Modern Personal Portfolio',
+    title: 'Soumya Ranjan Parida – Modern Portfolio',
     subtitle: 'Responsive Web Application with Dark Mode & Clean Hierarchy',
     category: 'Frontend',
     technologies: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS'],
@@ -328,6 +495,7 @@ export const projectsData: ProjectItem[] = [
       'Lightweight client-side animations for a polished corporate feel without distracting slop',
     ],
     githubUrl: 'https://github.com/soumyaranjan-parida',
+    demoUrl: 'https://srpportfolio.netlify.app/',
   },
 ];
 

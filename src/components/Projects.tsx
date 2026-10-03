@@ -13,13 +13,35 @@ import {
 } from 'lucide-react';
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState<'All' | 'Full Stack' | 'AI/ML' | 'Frontend'>('All');
+  const [activeFilter, setActiveFilter] = useState<'All' | 'AI/ML' | 'Full Stack' | 'Frontend' | 'Mobile & Android'>('All');
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+
+  const filterOptions = ['All', 'AI/ML', 'Full Stack', 'Frontend', 'Mobile & Android'] as const;
 
   const filteredProjects =
     activeFilter === 'All'
       ? projectsData
       : projectsData.filter((p) => p.category === activeFilter);
+
+  const getCategoryCount = (filter: (typeof filterOptions)[number]) => {
+    if (filter === 'All') return projectsData.length;
+    return projectsData.filter((p) => p.category === filter).length;
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI/ML':
+        return 'bg-purple-900/90 text-purple-200 border-purple-700/50';
+      case 'Full Stack':
+        return 'bg-blue-900/90 text-blue-200 border-blue-700/50';
+      case 'Mobile & Android':
+        return 'bg-emerald-900/90 text-emerald-200 border-emerald-700/50';
+      case 'Frontend':
+        return 'bg-teal-900/90 text-teal-200 border-teal-700/50';
+      default:
+        return 'bg-slate-900/80 text-white border-slate-700/50';
+    }
+  };
 
   return (
     <section id="projects" className="py-20 bg-slate-100/50 dark:bg-slate-900/40 border-y border-slate-200/80 dark:border-slate-800">
@@ -28,30 +50,39 @@ export default function Projects() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100/80 dark:bg-blue-950 text-blue-800 dark:text-blue-300 uppercase tracking-wider mb-3">
-            Portfolio Showcase
+            Portfolio Showcase • {projectsData.length} Projects
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Featured Projects
+            Featured Projects & Engineering Work
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Real-world systems engineered across Java Enterprise stacks, Machine Learning computer vision, and responsive web architectures.
+            Real-world systems engineered across Multilingual Voice AI, Machine Learning, Enterprise Java & Full Stack, Android mobile applications, and production portals.
           </p>
         </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {(['All', 'Full Stack', 'AI/ML', 'Frontend'] as const).map((filter) => (
+          {filterOptions.map((filter) => (
             <button
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2 ${
                 activeFilter === filter
                   ? 'bg-blue-700 text-white shadow-sm'
                   : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800'
               }`}
             >
-              {filter === 'All' ? 'All Projects' : filter}
+              <span>{filter === 'All' ? 'All Projects' : filter}</span>
+              <span
+                className={`px-1.5 py-0.5 rounded-full text-[11px] font-bold ${
+                  activeFilter === filter
+                    ? 'bg-blue-800 text-blue-100'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+                }`}
+              >
+                {getCategoryCount(filter)}
+              </span>
             </button>
           ))}
         </div>
@@ -83,9 +114,25 @@ export default function Projects() {
                   </div>
 
                   {/* Category Pill Tag */}
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-bold">
+                  <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-lg backdrop-blur-md text-[11px] font-bold border shadow-sm ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </div>
+
+                  {/* Live Web App Indicator */}
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-emerald-950/85 hover:bg-emerald-900 border border-emerald-500/50 backdrop-blur-md text-emerald-300 text-[11px] font-bold flex items-center gap-1.5 shadow-sm transition-colors cursor-pointer"
+                      title="Open Live Application"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                      <span>Live App</span>
+                      <ExternalLink className="w-3 h-3 text-emerald-300" />
+                    </a>
+                  )}
                 </div>
 
                 {/* Card Body */}
@@ -135,15 +182,19 @@ export default function Projects() {
                 </button>
 
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedProject(project)}
-                    className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                    title="Quick Preview"
-                    aria-label="Quick Preview"
-                  >
-                    <Eye className="w-4 h-4" />
-                  </button>
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900 transition-colors"
+                      title="Open Live Website / Application"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>Live</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
@@ -156,6 +207,15 @@ export default function Projects() {
                       <Github className="w-4 h-4" />
                     </a>
                   )}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(project)}
+                    className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    title="Quick Preview"
+                    aria-label="Quick Preview"
+                  >
+                    <Eye className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
 

@@ -56,7 +56,7 @@ export default function Projects() {
             Featured Projects & Engineering Work
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Real-world systems engineered across Multilingual Voice AI, Machine Learning, Enterprise Java & Full Stack, Android mobile applications, and production portals.
+            Real-world systems engineered across Multilingual Voice AI, Intelligent Weather & Climate Forecasting, Enterprise Java & Full Stack, Android mobile applications, and production portals.
           </p>
         </div>
 

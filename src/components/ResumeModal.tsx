@@ -6,6 +6,7 @@ import {
   Mail,
   Phone,
   Linkedin,
+  Github,
   MapPin,
   ExternalLink,
   Globe,
@@ -92,6 +93,16 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 <Linkedin className="w-3 h-3 text-blue-600" />
                 {personalInfo.linkedinDisplay}
               </span>
+              <span>•</span>
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-slate-800 hover:text-blue-700 hover:underline"
+              >
+                <Github className="w-3 h-3 text-slate-600" />
+                {personalInfo.githubDisplay}
+              </a>
               <span>•</span>
               <span className="flex items-center gap-1">
                 <MapPin className="w-3 h-3 text-slate-500" />

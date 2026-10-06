@@ -18,6 +18,8 @@ import jobskulImg from '../assets/images/jobskul_preview_1791008105846.jpg';
 import smartShopImg from '../assets/images/smart_shop_preview_1791008121192.jpg';
 import spVehicleImg from '../assets/images/sp_vehicle_preview_1791008137531.jpg';
 import youthClubImg from '../assets/images/youth_club_preview_1791008151280.jpg';
+import climamindImg from '../assets/images/climamind_preview_1791008992511.jpg';
+import apogeeCtsImg from '../assets/images/apogee_cts_preview_1791272081008.jpg';
 
 export const personalInfo = {
   name: 'Soumya Ranjan Parida',
@@ -28,8 +30,8 @@ export const personalInfo = {
   phoneFormatted: '+91 9336330551',
   linkedin: 'https://linkedin.com/in/Soumya',
   linkedinDisplay: 'linkedin.com/in/Soumya',
-  github: 'https://github.com/soumyaranjan-parida',
-  githubDisplay: 'github.com/soumya',
+  github: 'https://github.com/Soumya675',
+  githubDisplay: 'github.com/Soumya675',
   portfolioUrl: 'https://srpportfolio.netlify.app/',
   portfolioDisplay: 'srpportfolio.netlify.app',
   location: 'Khordha / Bhubaneswar, Odisha, India',
@@ -92,7 +94,7 @@ export const keyStats: StatItem[] = [
   },
   {
     label: 'Core Projects',
-    value: '8+',
+    value: '11+',
     sublabel: 'AI, Full Stack & Mobile Systems',
     iconName: 'FolderGit2',
   },
@@ -284,7 +286,8 @@ export const projectsData: ProjectItem[] = [
       'Permission-gated action orchestration layer preventing unconfirmed external API calls',
       'Low-latency semantic document retrieval delivering rapid factual grounding',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
+    demoUrl: 'https://kathaai1.netlify.app/',
   },
   {
     id: 'talentmatch-ai',
@@ -310,7 +313,35 @@ export const projectsData: ProjectItem[] = [
       'Heuristic parser isolating candidate experience, technical credentials, and achievements',
       'Lightweight client-side processing ensuring privacy of uploaded candidate documents',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
+    demoUrl: 'https://talentmatchai01.netlify.app/',
+  },
+  {
+    id: 'climamind-ai',
+    title: 'ClimaMind AI – Weather Forecast & Climate Intelligence App',
+    subtitle: 'AI-Powered Real-Time Weather Forecasting, Severe Alert Engine & Climate Analytics',
+    category: 'AI/ML',
+    technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Weather APIs', 'Predictive Analytics', 'Chart.js', 'Lucide Icons'],
+    description:
+      'Intelligent weather forecasting and climate analytics application providing real-time meteorological metrics, 7-day predictive forecasts, interactive precipitation trends, and AI-driven weather advisories.',
+    longDescription:
+      'ClimaMind AI is an intelligent, responsive weather forecasting and environmental intelligence web application deployed at climamindai.netlify.app. Built with modern React and TypeScript, it integrates real-time meteorological APIs and predictive analytics to deliver hyper-local weather tracking, 7-day temperature and precipitation forecasts, air quality index (AQI) monitoring, wind radar stats, and proactive climate advisory notifications. The platform features intuitive data visualizations, dynamic weather animations, and location-based automated geo-detection.',
+    features: [
+      'Real-time hyper-local weather telemetry including temperature, feels-like index, humidity, UV index, and atmospheric pressure',
+      'Multi-day predictive weather forecasting with interactive temperature graphs and precipitation probability trends',
+      'Air Quality Index (AQI) gauge and environmental health recommendations based on particulate matter levels',
+      'AI-powered climate intelligence module delivering context-aware travel, outdoor activity, and severe weather advisories',
+      'Automated geolocation detection and global city search with instant auto-complete and cached frequent queries',
+      'Responsive meteorological interface with dark/light themes, sleek glassmorphism cards, and dynamic weather condition icons',
+    ],
+    image: climamindImg,
+    architectureHighlights: [
+      'Asynchronous API pipeline with debounced location search, error tolerance, and localized memory caching to minimize redundant network requests',
+      'Predictive trend analysis and structured time-series aggregation for 24-hour hourly and 7-day extended forecasts',
+      'Zero-latency client-side state management ensuring smooth transitions between weather condition animations and metric units (Celsius/Fahrenheit)',
+    ],
+    githubUrl: 'https://github.com/Soumya675',
+    demoUrl: 'https://climamindai.netlify.app/',
   },
   {
     id: 'jobskul',
@@ -336,8 +367,35 @@ export const projectsData: ProjectItem[] = [
       'RESTful backend architecture providing sub-second candidate search and job indexing',
       'Modular state management managing complex resume drafting and application tracking',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
     demoUrl: 'https://jobskul.netlify.app/',
+  },
+  {
+    id: 'apogee-cts',
+    title: 'Apogee CTS – Consulting & Training Services',
+    subtitle: 'Higher Education & Campus Recruitment Acceleration Portal with Placement Analytics',
+    category: 'Full Stack',
+    technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Vite', 'Lucide Icons', 'Placement Analytics'],
+    description:
+      'High-impact campus recruitment training, psychometric profiling, hackathons, and placement acceleration platform empowering engineering and graduate students across 500+ Indian campuses.',
+    longDescription:
+      'Apogee CTS (apogeects.netlify.app) is an enterprise higher education consulting and campus recruitment training platform. Designed to bridge the university-to-corporate talent gap, it features student placement analytics, aptitude test bootcamps, psychometric profiling tools, full-stack & AI capstone training modules, and corporate recruitment preparation tailored for premier IT consulting firms including Deloitte, Capgemini, and Wipro.',
+    features: [
+      'Comprehensive campus recruitment training modules spanning quantitative aptitude, logical reasoning, and live coding assessments',
+      'Interactive placement readiness calculator computing student preparedness benchmarks against tier-1 hiring standards',
+      'Tiered corporate partner profiles with salary benchmarks (Deloitte USI, Capgemini, Wipro, Accenture)',
+      'Psychometric profiling and aptitude bootcamp scheduling with simulated mock interview tracks',
+      'College partnership enquiry and institutional onboarding system for university placement cells',
+      'Modern responsive interface with accessible navigation, dark/light aesthetics, and smooth section transitions',
+    ],
+    image: apogeeCtsImg,
+    architectureHighlights: [
+      'Component-driven layout optimized for fast mobile and desktop browsing performance',
+      'Interactive benchmark scoring algorithms calculating percentile readiness metrics',
+      'Accessible semantic forms and enquiry workflows with responsive interactive elements',
+    ],
+    githubUrl: 'https://github.com/Soumya675',
+    demoUrl: 'https://apogeects.netlify.app/',
   },
   {
     id: 'smart-shop',
@@ -389,7 +447,7 @@ export const projectsData: ProjectItem[] = [
       'Multi-lingual message template engine supporting customizable regional alert notifications',
       'Secure client data store designed for data confidentiality and compliance standards',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
     demoUrl: 'https://sp-pollution.netlify.app/',
   },
   {
@@ -416,7 +474,7 @@ export const projectsData: ProjectItem[] = [
       'Accessible Tailwind styling featuring cultural community color palette and typography',
       'Client-side form validation ensuring reliable member data acquisition',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
     demoUrl: 'https://mbycc.netlify.app/',
   },
   {
@@ -443,7 +501,7 @@ export const projectsData: ProjectItem[] = [
       'Spring Data JPA for automated ORM mapping, eliminating boilerplate SQL queries',
       'BCrypt password hashing and session token verification for user data protection',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
   },
   {
     id: 'animal-prediction-model',
@@ -468,7 +526,7 @@ export const projectsData: ProjectItem[] = [
       'Batch normalization and Dropout regularizers for robust convergence during training',
       'Confusion matrix analysis to assess inter-class recall and precision metrics',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675',
   },
   {
     id: 'portfolio-website',
@@ -494,7 +552,7 @@ export const projectsData: ProjectItem[] = [
       'Tailwind CSS design token system ensuring consistent typography, spacing, and neutral colors',
       'Lightweight client-side animations for a polished corporate feel without distracting slop',
     ],
-    githubUrl: 'https://github.com/soumyaranjan-parida',
+    githubUrl: 'https://github.com/Soumya675/Portfolio',
     demoUrl: 'https://srpportfolio.netlify.app/',
   },
 ];
